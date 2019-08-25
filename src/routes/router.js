@@ -28,7 +28,7 @@ const router = {
       let path = __dirname + '/../db/users/' + post.username + '.json';
       fs.writeFile(path, body, (err, result) => {
         let resJson = {
-          success: true,
+          status: 'success',
           user: post
         };
         res.end(JSON.stringify(resJson, null, 2));
